@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"web-dev": "webpack-dev-server --content-base ./ --config webpack.dev.config.js --port 3009 --inline --hot --colors --host 0.0.0.0 --public localhost:3009",
-		"web-prod": "webpack --config webpack.prod.config.js --progress --colors",
+		"web-prod": "webpack --config webpack.prod.config.js --env=prod --progress --profile --colors",
 		"clear-cache": "gulp clear-cache"
 	},
 	"dependencies": {
