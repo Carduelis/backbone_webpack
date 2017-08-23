@@ -36,10 +36,12 @@
 		z-index: 1;
 	}
 	&--grey {
-		box-shadow: inset 0 0 @pad/2 rgba(0, 0, 0, .1);
-		background-color: #fafafa;
+		box-shadow: none;
+		background-color: transparent;
 		.b-card-link {
-			margin: @pad;
+			box-shadow: 0 0 @pad*4 -@pad*2 rgba(0, 0, 0, .4),
+				0 0 1px rgba(0, 0, 0, .1);
+			border-radius: @pad/2;
 		}
 	}
 }

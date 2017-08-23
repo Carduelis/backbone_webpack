@@ -1,9 +1,11 @@
 import { CollectionView } from 'backbone.marionette';
 import Card from '../Card';
 import UserView from './UserView';
+import EmptyView from './EmptyView';
 
 const UsersCardsView = CollectionView.extend({
 	childView: Card,
+	emptyView: EmptyView,
 	className: 'b-cards-wrapper',
 	childViewOptions(model) {
 		return {
