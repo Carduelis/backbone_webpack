@@ -1,0 +1,138 @@
+@import "palette.less";
+
+html {
+	font-size: 15px;
+	font-family: Helvetica, Arial, sans-serif;
+	@media (max-width: 768px) {
+		font-size: 12px;
+	}
+	@media (min-width: 1921px) {
+		font-size: 18px;
+	}
+}
+@pad: 1rem;
+* {
+	box-sizing: border-box;
+}
+p {
+	line-height: 1.4em;
+}
+[data-action] {
+	cursor: pointer;
+}
+.dashed {
+	border-bottom: 1px dashed;
+}
+.dotted {
+	border-bottom: 1px dotted;
+}
+.code {
+	font-family: monospace;
+	color: @palette-Blue-Grey-500;
+}
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #f7f8fa;
+}
+#app-loading {
+	padding: @pad*5;
+	opacity: .4;
+	text-align: center;
+}
+.k-island {
+	background-color: #fff;
+	padding: @pad*4;
+	border-radius: @pad/4;
+	box-shadow: 0 5px 20px -5px rgba(0, 0, 0, .1);
+	margin: @pad*4 auto;
+	width: 90%;
+	max-width: 1600px;
+	min-width: 320px;
+	@media (max-width: 768px) {
+		padding: @pad*4 @pad*2;
+	}
+	@media (max-width: 640px) {
+		margin: @pad*2 auto;
+	}
+	&.k-header {
+		padding-top: @pad;
+		padding-bottom: @pad;
+	}
+}
+.k-form {
+	&-line {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 480px) {
+			flex-wrap: wrap;
+		}
+		input,
+		button {
+			flex-grow: 1;
+			flex-basis: 80%;
+		}
+		button {
+			white-space: nowrap;
+			flex-basis: 20%;
+			margin-left: @pad;
+			@media (max-width: 480px) {
+				margin-left: 0;
+				margin-top: @pad;
+			}
+		}
+	}
+	&-help-text {
+		color: #999;
+		font-family: monospace;
+	}
+}
+
+.k-input {
+	border: 1px solid #ccc;
+	padding: @pad;
+}
+.k-navbar {
+	margin-bottom: @pad;
+	font-size: 1.15em;
+	.k-link {
+		margin-right: @pad;
+	}
+}
+.k-link {
+	color: @palette-Blue-700;
+	text-decoration: none;
+	border-bottom: 1px solid @palette-Blue-200;
+	&:hover {
+		color: @palette-Blue-800;
+		border-color: @palette-Blue-500;
+	}
+	&--red {
+		color: @palette-Red-700;
+		border-color: @palette-Red-200;
+	}
+}
+.k-phone-link {
+	color: @palette-Blue-Grey-700;
+	text-decoration: none;
+	border-bottom: 1px solid @palette-Blue-Grey-200;
+	&:hover {
+		color: @palette-Blue-Grey-800;
+		border-color: @palette-Blue-Grey-500;
+	}
+}
+.k-button {
+	border: 1px solid #ccc;
+	padding: @pad;
+	border-radius: @pad/4;
+	cursor: pointer;
+	color: darken(spin(desaturate(blue, 50%), -30%), 15%);
+	text-shadow: 0 1px 1px #fff;
+	background-color: #eee;
+	background: linear-gradient(to bottom, #fff 0%, #ccc 100%);
+}
+
+@import "card.less";
+@import "table.less";
+@import "user.less";

@@ -1,0 +1,22 @@
+.k-table {
+	width: 100%;
+	max-width: 100%;
+	text-align: left;
+	tr {
+		&:nth-of-type(2n) {
+			background-color: fadeout(@palette-Blue-Grey-50, 70%);
+		}
+		&:hover {
+			background-color: fadeout(@palette-Blue-Grey-50, 20%);
+		}
+	}
+	td,
+	th {
+		padding: @pad/2;
+		&:first-child {
+			text-align: right;
+			width: @pad*4;
+			color: @palette-Blue-Grey-400;
+		}
+	}
+}
