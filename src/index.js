@@ -1,3 +1,4 @@
+/* eslint-disable */
 import less from './less/index.less';
 import Bb from 'backbone';
 import Mn from 'backbone.marionette';
@@ -7,7 +8,7 @@ import Root from './components/Root';
 import Header from './components/Header';
 import IslandView from './components/IslandView';
 
-var App = Mn.Application.extend({
+const App = Mn.Application.extend({
 	region: '#app',
 	initialize: function() {}
 });
